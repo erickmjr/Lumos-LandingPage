@@ -1,0 +1,56 @@
+@use 'variables';
+
+.header {
+    padding: 3vh 4vw;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &__brand {
+            width: 100%;
+            max-width: 100px;
+        }
+
+        &__nav {
+            display: flex;
+            align-items: center;
+        }
+
+        &__navigation {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 3vw;
+            height: 100%;
+            margin: 0;
+
+            &__item {
+                color: variables.$principalTextColor;
+                cursor: pointer;
+
+                .navigation__item__span {
+                    background-color:variables.$secondaryTextColor;
+                    height: 2px;
+                    display: block;
+                    width: 100%;
+                    border-radius: 10px;
+                    margin-top: 4px;
+                }
+            }
+        }
+
+        &__profile {
+            width: 10%;
+
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 3vw;
+        }
+    }
+    
+}

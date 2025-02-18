@@ -1,7 +1,9 @@
-body {
-    h1 {
-        background-image: url('../images/image.png');
-        background-size: cover;
-    }
-    
+@use 'reset';
+@use 'hero';
+@use 'header';
+@use 'variables';
+
+a {
+    color: white;
+    text-decoration: none;
 }
