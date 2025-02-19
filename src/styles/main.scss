@@ -2,8 +2,13 @@
 @use 'hero';
 @use 'header';
 @use 'variables';
+@use 'control-show';
 
 a {
     color: white;
     text-decoration: none;
+}
+
+p {
+    color: variables.$principalTextColor;
 }
