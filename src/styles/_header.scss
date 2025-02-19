@@ -39,13 +39,19 @@
                     width: 100%;
                     border-radius: 10px;
                     margin-top: 4px;
+                    visibility: hidden;
+                }
+
+                &--is-active {
+                    .navigation__item__span {
+                        visibility: inherit;
+                    }
                 }
             }
         }
 
         &__profile {
             width: 10%;
-
             display: flex;
             align-items: center;
             justify-content: end;

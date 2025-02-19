@@ -1,0 +1,31 @@
+@use 'variables';
+
+@mixin navigationArrows {
+    .pagination-arrows {
+        padding: 0 2vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;    
+        color: variables.$principalTextColor;
+        
+        &__container {
+            display: flex;
+            align-items: center;
+        }
+        &__right, &__left {
+            font-size: 40px;
+            
+        }
+    }
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variables.$principalTextColor;
+}
+
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    color: variables.$principalTextColor;
+}

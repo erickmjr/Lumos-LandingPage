@@ -6,6 +6,7 @@
     <title>Netflix - YOU</title>
     <link rel="stylesheet" href="dist/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
     <div class="hero">
@@ -13,8 +14,8 @@
             <div class="header__container">
                 <img src="./src/images/logos/netflix.svg" alt="Netflix" class="header__container__brand">
                 <nav class="header__container__nav">
-                    <ul class="header__container__navigation">
-                        <li class="header__container__navigation__item">
+                    <ul class="header__container__navigation text">
+                        <li class="header__container__navigation__item header__container__navigation__item--is-active">
                             Ínicio
                             <span class="navigation__item__span"></span>
                         </li>
@@ -53,64 +54,85 @@
         </header>
 
         <section class="control-show">
-            <div class="control-show__brand__container-infos">
-                <img src="./src/images/logos/you_brand.png" alt="You">
-                <p>
-                    Thriller psicológico que acompanha Joe Goldberg, um homem charmoso, porém obsessivo. A série explora os limites entre amor e obsessão, revelando os lados sombrios de relacionamentos e as consequências de ações extremas.
-                </p>
-                <nav>
-                    <ul class="control-show__brand__container-infos__categories">
-                        <li class="control-show__brand__container-infos__categories__item">
-                            <a href="#">Crime</a>
-                        </li>
-                        <li class="control-show__brand__container-infos__categories__item">
-                            <a href="#">Drama</a>
-                        </li>
-                        <li class="control-show__brand__container-infos__categories__item">
-                            <a href="#">Romance</a>
-                        </li>
-                        <li class="control-show__brand__container-infos__categories__item">
-                            <i class="fas fa-star"></i>
-                            9.6
-                        </li>
-                        <li class="control-show__brand__container-infos__categories__item">
-                            18+
-                        </li>
-                    </ul>
-                </nav>
-                <div class="buttons__container">
-                    <button class="buttons__container__button buttons__container__button__watch">
-                        Assistir agora
-                    </button>
-                    <button class="buttons__container__button">
-                        Adicionar à lista
-                    </button>
+            <div class="control-show__container">
+                <div class="control-show__brand__container-infos">
+                    <img src="./src/images/logos/you_brand.png" alt="You">
+                    <p class="text">
+                        Thriller psicológico que acompanha Joe Goldberg, um homem charmoso, porém obsessivo. A série explora os limites entre amor e obsessão, revelando os lados sombrios de relacionamentos e as consequências de ações extremas.
+                    </p>
+                    <nav>
+                        <ul class="control-show__brand__container-infos__categories text">
+                            <a href="#">
+                                <li class="control-show__brand__container-infos__categories__item">
+                                    Crime
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li class="control-show__brand__container-infos__categories__item">
+                                Drama
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li class="control-show__brand__container-infos__categories__item">
+                                Romance
+                                </li>
+                            </a>
+                            <li class="control-show__brand__container-infos__categories__item">
+                                <i class="fas fa-star"></i>
+                                9.6
+                            </li>
+                            <li class="control-show__brand__container-infos__categories__item">
+                                18+
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="buttons__container">
+                        <button class="buttons__container__button buttons__container__button__watch">
+                            Assistir agora
+                        </button>
+                        <button class="buttons__container__button">
+                            Adicionar à lista
+                        </button>
+                    </div>
+                </div>
+                <div class="control-show__switch__container">
+                    <nav class="control-show__switch__container__nav">
+                        <ul class="control-show__switch__container__nav__list text--big">
+                            <li class="control-show__switch__container__nav__list__item control-show__switch__container__nav__list__item--is-active">
+                                <a href="#">
+                                    Visão geral
+                                </a>
+                                <span></span>
+                            </li>
+                            <li class="control-show__switch__container__nav__list__item">
+                                <a href="#">
+                                    Episódios
+                                </a>
+                                <span></span>
+                            </li>
+                            <li class="control-show__switch__container__nav__list__item">
+                                <a href="#">
+                                    Detalhes
+                                </a>
+                                <span></span>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-
-            <div class="control-show__switch__container">
-                <nav class="control-show__switch__container__nav">
-                    <ul class="control-show__switch__container__nav__list">
-                        <li class="control-show__switch__container__nav__list__item">
-                            <a href="#">
-                                Visão geral
-                            </a>
-                            <span class="control-show__switch__container__nav__list__item__span"></span>
-                        </li>
-                        <li class="control-show__switch__container__nav__list__item">
-                            <a href="#">
-                                Episódios
-                            </a>
-                            <span class="control-show__switch__container__nav__list__item__span"></span>
-                        </li>
-                        <li class="control-show__switch__container__nav__list__item">
-                            <a href="#">
-                                Detalhes
-                            </a>
-                            <span class="control-show__switch__container__nav__list__item__span"></span>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="pagination-arrows">
+                <div>
+                    <a href="#" class="pagination-arrows__container text--big">
+                        <i class="bi bi-chevron-left pagination-arrows__left"></i>
+                        Anterior
+                    </a>
+                </div>
+                <div>
+                    <a href="#" class="pagination-arrows__container text--big">
+                        Próximo
+                        <i class="bi bi-chevron-right pagination-arrows__right"></i>
+                    </a>
+                </div>
             </div>
         </section>
     </div>

@@ -1,96 +1,110 @@
 @use 'variables';
+@use 'mixins';
 
 .control-show {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
+    @include mixins.navigationArrows;
+    
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
 
-    &__brand__container-infos {
-        
-        padding: 2vw;
-        width: 100%;
-
-        img {
+        .control-show__brand__container-infos {
+            padding: 2vw 2vw;
             width: 100%;
-            max-width: 380px;
-        }
 
-        p {
-            padding: 1vw;
-            margin-top: 5%;
-            font-weight: 400;
-            width: 60%;
-            color: variables.$principalFont;
-        }
-
-        &__categories {
-            display: flex;
-            align-items: center;
-            padding: 1vw;
-            gap: 12px;
-            
-            &__item {
-                border: 2px solid variables.$principalTextColor;
-                border-radius: 20px;
-                padding: 12px;
-                color: variables.$principalTextColor;
-                font-weight: 500;
-                background-color: rgba(variables.$detailsColor, .4);
-
-                &:nth-child(4), &:nth-child(5) {
-                    border: none;
-                    background-color: transparent;
-                }
+            img {
+                width: 100%;
+                max-width: 280px;
             }
-        }
 
-        .buttons__container {
-            width: 60%;
-            display: flex;
-            gap: 1vw;
-            justify-content: start;
-            padding: 1vw;
-
-            &__button {
-                background: transparent;
-                background-color: rgba(variables.$backgroundColor, .9);
-                border: 1px solid variables.$backgroundColor;
-                color: variables.$principalTextColor;
+            p {
                 padding: 1vw;
-                border-radius: 4px;
-                font-weight: 700;
-                cursor: pointer;
+                margin-top: 5%;
+                font-weight: 400;
+                width: 60%;
+                color: variables.$principalFont;
+            }
 
-                &__watch {
-                    background-color: variables.$secondaryTextColor;
-                    border-color: rgba(variables.$secondaryTextColor, .7);
+            &__categories {
+                display: flex;
+                align-items: center;
+                padding: 1vw;
+                gap: 12px;
+                
+                &__item {
+                    border: 2px solid variables.$principalTextColor;
+                    border-radius: 20px;
+                    padding: 12px;
+                    color: variables.$principalTextColor;
+                    font-weight: 500;
+                    background-color: rgba(variables.$detailsColor, .4);
+
+                    &:nth-child(4), &:nth-child(5) {
+                        border: none;
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            .buttons__container {
+                width: 60%;
+                display: flex;
+                gap: 1vw;
+                justify-content: start;
+                padding: 1vw;
+
+                &__button {
+                    background: transparent;
+                    background-color: rgba(variables.$backgroundColor, .9);
+                    border: 1px solid variables.$backgroundColor;
+                    color: variables.$principalTextColor;
+                    padding: 1vw;
+                    border-radius: 4px;
+                    font-weight: 700;
+                    cursor: pointer;
+
+                    &__watch {
+                        background-color: variables.$secondaryTextColor;
+                        border-color: rgba(variables.$secondaryTextColor, .7);
+                    }
                 }
             }
         }
-    }
 
-    &__switch__container {
+        .control-show__switch__container {
+            margin-top: 15%;
 
-        margin-top: 15%;
-
-        &__nav {
-            display: flex;
-            justify-content: end;
-            padding-right: 5vw;
-            align-items: start;
-
-            &__list {
+            &__nav {
                 display: flex;
-                flex-direction: column;
-                gap: 3vh;
+                justify-content: end;
+                padding-right: 5vw;
+                align-items: start;
 
-                &__item {
+                &__list {
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    gap: 3vh;
 
-                    &__span {
-                        background-color: variables.$secondaryTextColor;
-                        width: 2px;
-                        height: 100%;
+
+                    &__item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 8px;  
+
+                        span {
+                            background-color: variables.$secondaryTextColor;
+                            width: 2px;
+                            height: 20px;
+                            border-radius: 4px;
+                            visibility: hidden;
+                        }
+
+                        &--is-active {
+                            span {
+                                visibility: inherit;
+                            }
+                        }      
                     }
                 }
             }
