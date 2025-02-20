@@ -1,0 +1,30 @@
+@use 'mixins';
+
+.catalog {
+    @include mixins.navigationArrows;
+    height: 60vh;
+    width: 100%;
+
+    &__title {
+        font-weight: 400;
+        padding: 2.5vw 4.75vw;
+        text-align: left;
+    }
+
+    &__container {
+        padding: 2vw;
+        padding-top: 0;
+        text-align: center;
+        
+        .catalog__carousel {
+            margin-bottom: 3vh;
+            text-align: center;
+            &__item {
+                img {
+                    width: 260px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'mixins';
 
 .header {
     padding: 3vh 4vw;
@@ -31,6 +32,7 @@
             &__item {
                 color: variables.$principalTextColor;
                 cursor: pointer;
+                @include mixins.transform;
 
                 .navigation__item__span {
                     background-color:variables.$secondaryTextColor;

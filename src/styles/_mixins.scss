@@ -1,5 +1,13 @@
 @use 'variables';
 
+@mixin transform {
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 @mixin navigationArrows {
     .pagination-arrows {
         padding: 0 2vw;
@@ -7,14 +15,17 @@
         display: flex;
         justify-content: space-between;    
         color: variables.$principalTextColor;
-        
+
         &__container {
+            all:unset;
+            @include transform();
+            cursor: pointer;
             display: flex;
             align-items: center;
         }
-        &__right, &__left {
+
+        .bi {
             font-size: 40px;
-            
         }
     }
 }

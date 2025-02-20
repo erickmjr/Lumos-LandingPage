@@ -4,10 +4,16 @@
 @use 'variables';
 @use 'control-show';
 @use 'mixins';
+@use 'catalog';
+
+body {
+    font-family: variables.$principalFont, sans-serif;
+}
 
 a {
     color: white;
     text-decoration: none;
+    @include mixins.transform;
 }
 
 p {

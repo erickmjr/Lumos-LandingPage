@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="dist/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
 </head>
 <body>
     <div class="hero">
         <header class="header">
             <div class="header__container">
-                <img src="./src/images/logos/netflix.svg" alt="Netflix" class="header__container__brand">
+                <h1>
+                    <img src="./src/images/logos/netflix.svg" alt="Netflix" class="header__container__brand">
+                </h1>
                 <nav class="header__container__nav">
                     <ul class="header__container__navigation text">
                         <li class="header__container__navigation__item header__container__navigation__item--is-active">
@@ -122,21 +126,64 @@
             </div>
             <div class="pagination-arrows">
                 <div>
-                    <a href="#" class="pagination-arrows__container text--big">
-                        <i class="bi bi-chevron-left pagination-arrows__left"></i>
+                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__left">
+                        <i class="bi bi-chevron-left"></i>
                         Anterior
-                    </a>
+                    </button>
                 </div>
                 <div>
-                    <a href="#" class="pagination-arrows__container text--big">
+                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__right">
                         Próximo
-                        <i class="bi bi-chevron-right pagination-arrows__right"></i>
-                    </a>
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </section>
     </div>
 
+    <section class="catalog">
+        <h2 class="catalog__title title">Catálogo</h2>
+
+        <div class="catalog__container">
+            <div class="catalog__carousel">
+                <div class="catalog__carousel__item">
+                    <img src="./src/images/catalog/bojack_mobile.webp" alt="Bojack horseman">
+                </div>
+                <div class="catalog__carousel__item">
+                    <img src="./src/images/catalog/bojack_mobile.webp" alt="Bojack horseman">
+                </div>
+                <div class="catalog__carousel__item">
+                    <img src="./src/images/catalog/bojack_mobile.webp" alt="Bojack horseman">
+                </div>
+                <div class="catalog__carousel__item">
+                    <img src="./src/images/catalog/bojack_mobile.webp" alt="Bojack horseman">
+                </div>
+                <div class="catalog__carousel__item">
+                    <img src="./src/images/catalog/bojack_mobile.webp" alt="Bojack horseman">
+                </div>
+                <div class="catalog__carousel__item">
+                    <img src="./src/images/catalog/bojack_mobile.webp" alt="Bojack horseman">
+                </div>
+            </div>
+            <div class="pagination-arrows">
+                <div>
+                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__left"  id="buttonPrev">
+                        <i class="bi bi-chevron-left"></i>
+                        Anterior
+                    </button>
+                </div>
+                <div>
+                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__right" id="buttonNext">
+                        Próximo
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./src/scripts/jquery.min.js"></script>
     <script src="./dist/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 </body>
 </html>
