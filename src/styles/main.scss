@@ -4,7 +4,7 @@
 @use 'variables';
 @use 'control-show';
 @use 'mixins';
-@use 'catalog';
+@use 'highlight';
 
 body {
     font-family: variables.$principalFont, sans-serif;
@@ -18,6 +18,11 @@ a {
 
 p {
     color: variables.$principalTextColor;
+}
+
+.v--hidden {
+    visibility: hidden;
+    cursor: none;
 }
 
 .text--big {
