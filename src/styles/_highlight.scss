@@ -7,12 +7,6 @@
     width: 100%;
     overflow: hidden;
 
-    &__title {
-        font-weight: 400;
-        padding: 2.5vw 4.75vw;
-        text-align: left;
-    }
-
     &__container {
         padding: 2vw;
         padding-top: 0;
@@ -36,6 +30,7 @@
 
                     img {
                         border-color: variables.$principalTextColor;
+                        box-shadow: 10px 10px 40px 10px black;
                     }
                 }
 
@@ -44,9 +39,21 @@
                     z-index: 0;
                     top: 50px;
                     left: 25px;
-                    
-                    :nth-child(1) {
-                        padding-right: 30px;
+                }
+
+                &:nth-child(1) {
+
+                    .highlight__carousel__item__num {
+                        left: 35px;
+                        letter-spacing: -35px;
+                    }
+                }
+
+                &:nth-child(10) {
+
+                    .highlight__carousel__item__num {
+                        left: -30px;
+                        letter-spacing: -35px;
                     }
                 }
                 
@@ -59,7 +66,6 @@
                     @include mixins.translateNum;
                 }
 
-                
                 img {
                     width: 160px;
                     height: 100%;

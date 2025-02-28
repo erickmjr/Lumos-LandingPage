@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix - YOU</title>
+    <title>Lumos</title>
     <link rel="stylesheet" href="dist/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -25,12 +25,7 @@
                         </li>
                         
                         <li class="header__container__navigation__item">
-                            Catálogo
-                            <span class="navigation__item__span"></span>
-                        </li>
-                        
-                        <li class="header__container__navigation__item">
-                            Assinaturas
+                            Destaques
                             <span class="navigation__item__span"></span>
                         </li>
                         
@@ -43,7 +38,6 @@
                             FAQ
                             <span class="navigation__item__span"></span>
                         </li>
-                        
                     </ul>
                 </nav>
 
@@ -162,10 +156,40 @@
                     </div>
                     <img src="./src/images/highlight/parasite.png" alt="parasita">
                 </div>
+                <div class="highlight__carousel__item">
+                    <div class="highlight__carousel__item__num">
+                        <h3 class="num__h3">6</h3>
+                    </div>
+                    <img src="./src/images/highlight/rick_morty.png" alt="Rick and Morty">
+                </div>
+                <div class="highlight__carousel__item">
+                    <div class="highlight__carousel__item__num">
+                        <h3 class="num__h3">7</h3>
+                    </div>
+                    <img src="./src/images/highlight/interestelar.png" alt="interestelar">
+                </div>
+                <div class="highlight__carousel__item">
+                    <div class="highlight__carousel__item__num">
+                        <h3 class="num__h3">8</h3>
+                    </div>
+                    <img src="./src/images/highlight/mib.png" alt="MIB">
+                </div>
+                <div class="highlight__carousel__item">
+                    <div class="highlight__carousel__item__num">
+                        <h3 class="num__h3">9</h3>
+                    </div>
+                    <img src="./src/images/highlight/batman_dark_knight.png" alt="Batman - O cavaleiro das trevas">
+                </div>
+                <div class="highlight__carousel__item">
+                    <div class="highlight__carousel__item__num">
+                        <h3 class="num__h3">1O</h3>
+                    </div>
+                    <img src="./src/images/highlight/suicide-squad.png" alt="Esquadrão suicida">
+                </div>
             </div>
             <div class="pagination-arrows">
-                <div>
-                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__left"  id="buttonPrev">
+                <div class="v--hidden">
+                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__left v--hidden" id="buttonPrev">
                         <i class="bi bi-chevron-left"></i>
                         Anterior
                     </button>
@@ -176,6 +200,46 @@
                         <i class="bi bi-chevron-right"></i>
                     </button>
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <span class="section-split"></span>
+
+    <section class="mylist">
+        <h2 class="mylist__title title">Lançamentos</h2>
+        <div class="mylist__container">
+            <div class="mylist__carousel">
+                <div class="mylist__carousel__item">
+                    <img src="./src/images/mylist/spiderman-nowayhome.png" alt="Homem-Aranha - Sem volta pra casa">
+                </div>
+                <div class="mylist__carousel__item">
+                    <img src="./src/images/mylist/hajime_no_ippo.png" alt="Hajime no Ippo">
+                </div>
+                <div class="mylist__carousel__item">
+                    <img src="./src/images/mylist/captain_tsubasa.png" alt="Captain Tsubasa">
+                </div>
+                <div class="mylist__carousel__item">
+                    <img src="./src/images/mylist/opm.png" alt="One punch man">
+                </div>
+                <div class="mylist__carousel__item">
+                    <img src="./src/images/mylist/nana.png" alt="Nana">
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination-arrows">
+            <div class="v--hidden">
+                <button type="button" class="pagination-arrows__container text--big pagination-arrows__left v--hidden" id="buttonPrevmylist">
+                    <i class="bi bi-chevron-left"></i>
+                    Anterior
+                </button>
+            </div>
+            <div>
+                <button type="button" class="pagination-arrows__container text--big pagination-arrows__right" id="buttonNextmylist">
+                    Próximo
+                    <i class="bi bi-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>

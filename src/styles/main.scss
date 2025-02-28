@@ -5,6 +5,7 @@
 @use 'control-show';
 @use 'mixins';
 @use 'highlight';
+@use 'releases';
 
 body {
     font-family: variables.$principalFont, sans-serif;
@@ -18,6 +19,23 @@ a {
 
 p {
     color: variables.$principalTextColor;
+}
+
+h2 {
+    padding: 2.5vw 4.75vw;
+    text-align: left;
+    color: variables.$principalTextColor;
+    font-weight: 400;
+}
+
+.section-split {
+    background-color:variables.$detailsColor;
+    height: 2px;
+    display: block;
+    width: 100%;
+    max-width: 95vw;
+    margin: 2vh auto;
+    border-radius: 10px;
 }
 
 .v--hidden {
