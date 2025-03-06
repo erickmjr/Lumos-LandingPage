@@ -3,14 +3,10 @@
 
 .highlight {
     @include mixins.navigationArrows;
-    height: 60vh;
-    width: 100%;
-    overflow: hidden;
+    @include mixins.sectionBasic;
 
     &__container {
-        padding: 2vw;
-        padding-top: 0;
-        text-align: center;
+        @include mixins.sectionContainerBasic;
         
         .highlight__carousel {
             margin-bottom: 3vh;

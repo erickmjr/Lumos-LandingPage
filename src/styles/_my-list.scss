@@ -1,0 +1,46 @@
+@use 'mixins';
+@use 'variables';
+
+.mylist {
+    @include mixins.navigationArrows;
+    @include mixins.sectionBasic;
+
+    &__container {
+        @include mixins.sectionContainerBasic;
+
+        .mylist__carousel {
+            margin-bottom: 3vh;
+
+            &__item {
+                position: relative;
+                &:hover {
+                    
+                    img {
+                        
+                    }
+                }
+                
+                &__actions {
+                    
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    
+
+                    button {
+                        all: unset;
+                        font-size: 25px;
+                        cursor: pointer;
+                        color: variables.$color;
+                        padding: 4px;
+
+                        &:hover {
+                            @include mixins.transform;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

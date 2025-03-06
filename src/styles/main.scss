@@ -5,7 +5,7 @@
 @use 'control-show';
 @use 'mixins';
 @use 'highlight';
-@use 'releases';
+@use 'my-list';
 
 body {
     font-family: variables.$principalFont, sans-serif;
@@ -41,6 +41,10 @@ h2 {
 .v--hidden {
     visibility: hidden;
     cursor: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 .text--big {

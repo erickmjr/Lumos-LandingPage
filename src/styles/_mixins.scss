@@ -1,5 +1,20 @@
 @use 'variables';
 
+
+@mixin sectionBasic {
+    @include navigationArrows();
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+@mixin sectionContainerBasic {
+    padding: 2vw;
+    padding-top: 0;
+    text-align: center;
+}
+
 @mixin transform {
     transition: transform 0.3s ease-in-out;
 

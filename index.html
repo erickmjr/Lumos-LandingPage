@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -189,13 +189,13 @@
             </div>
             <div class="pagination-arrows">
                 <div class="v--hidden">
-                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__left v--hidden" id="buttonPrev">
+                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__left v--hidden" id="buttonPrevHighlight">
                         <i class="bi bi-chevron-left"></i>
                         Anterior
                     </button>
                 </div>
                 <div>
-                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__right" id="buttonNext">
+                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__right" id="buttonNextHighlight">
                         Próximo
                         <i class="bi bi-chevron-right"></i>
                     </button>
@@ -207,39 +207,53 @@
     <span class="section-split"></span>
 
     <section class="mylist">
-        <h2 class="mylist__title title">Lançamentos</h2>
+        <h2 class="mylist__title title">Minha lista</h2>
         <div class="mylist__container">
             <div class="mylist__carousel">
                 <div class="mylist__carousel__item">
                     <img src="./src/images/mylist/spiderman-nowayhome.png" alt="Homem-Aranha - Sem volta pra casa">
+                    <div class="mylist__carousel__item__actions">
+                        <button class="bi bi-three-dots-vertical"></button>
+                    </div>
                 </div>
                 <div class="mylist__carousel__item">
                     <img src="./src/images/mylist/hajime_no_ippo.png" alt="Hajime no Ippo">
+                    <div class="mylist__carousel__item__actions">
+                        <button class="bi bi-three-dots-vertical"></button>
+                    </div>
                 </div>
                 <div class="mylist__carousel__item">
                     <img src="./src/images/mylist/captain_tsubasa.png" alt="Captain Tsubasa">
+                    <div class="mylist__carousel__item__actions">
+                        <button class="bi bi-three-dots-vertical"></button>
+                    </div>
                 </div>
                 <div class="mylist__carousel__item">
                     <img src="./src/images/mylist/opm.png" alt="One punch man">
+                    <div class="mylist__carousel__item__actions">
+                        <button class="bi bi-three-dots-vertical"></button>
+                    </div>
                 </div>
                 <div class="mylist__carousel__item">
                     <img src="./src/images/mylist/nana.png" alt="Nana">
+                    <div class="mylist__carousel__item__actions">
+                        <button class="bi bi-three-dots-vertical"></button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="pagination-arrows">
-            <div class="v--hidden">
-                <button type="button" class="pagination-arrows__container text--big pagination-arrows__left v--hidden" id="buttonPrevmylist">
-                    <i class="bi bi-chevron-left"></i>
-                    Anterior
-                </button>
-            </div>
-            <div>
-                <button type="button" class="pagination-arrows__container text--big pagination-arrows__right" id="buttonNextmylist">
-                    Próximo
-                    <i class="bi bi-chevron-right"></i>
-                </button>
+            <div class="pagination-arrows">
+                <div class="v--hidden">
+                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__left v--hidden" id="buttonPrevList">
+                        <i class="bi bi-chevron-left"></i>
+                        Anterior
+                    </button>
+                </div>
+                <div>
+                    <button type="button" class="pagination-arrows__container text--big pagination-arrows__right" id="buttonNextList">
+                        Próximo
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
