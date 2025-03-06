@@ -23,15 +23,14 @@
                 &__actions {
                     
                     top: 0;
-                    left: 0;
+                    right: 10px;
                     position: absolute;
                     
-
                     button {
                         all: unset;
                         font-size: 25px;
                         cursor: pointer;
-                        color: variables.$color;
+                        color: variables.$principalTextColor;
                         padding: 4px;
 
                         &:hover {
