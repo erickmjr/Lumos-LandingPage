@@ -13,14 +13,14 @@
 
                 padding: 0;
                 text-align: center;
-                margin: 2.5vw 0 1vw;
+                margin: 2.5vw 0 0vw;
 
             }
         }
 
         &__input {
 
-            margin-top: 2vw;
+            
             text-align: center;
 
             .h3 {
@@ -29,6 +29,7 @@
 
             &__form {
 
+                margin-top: 1vw;
                 display: flex;
                 justify-content: center;
 
@@ -41,16 +42,18 @@
 
                     border: none;
                     text-align: center;
-                    padding: 2vw;
-                    font-size: 2.5vw;
+                    padding: 1vw;
+                    font-size: 1.5vw;
                     border-radius: 20px 0 0 20px;
                 }
 
                 .form__button  {
                     border: none;
                     padding: 2vw;
-                    font-size: 2.5vw;
+                    font-size: 1.5vw;
                     border-radius: 0 20px 20px 0;
+                    background-color: variables.$secondaryTextColor;
+                    color: variables.$principalTextColor;
                 }
             }
         }
