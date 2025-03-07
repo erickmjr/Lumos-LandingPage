@@ -42,15 +42,13 @@ $(document).ready(function(){
     
     carouselList.slick({
         slidesToShow: 4,
-        slidesToScroll: 1,
         autoplay: false,
         arrows: false,
-        autoplay: false,
-        infinite: false,
+        infinite: true,
         edgeFriction: 0,
-        draggable: false
+        draggable: true
     });
-
+    
     buttonPrevList.click(function(){
         carouselList.slick('slickPrev');
     });
@@ -59,15 +57,33 @@ $(document).ready(function(){
         carouselList.slick('slickNext');
     });
 
-    carouselList.on('afterChange', function (event, slick, currentSlide){
-        console.log(currentSlide)
-        if (currentSlide === 0) {
-            buttonPrevList.parent().addClass('v--hidden');
-            buttonNextList.parent().removeClass('v--hidden');
-        } else if ((currentSlide > 0)) {
-            buttonPrevList.parent().removeClass('v--hidden');
-            buttonNextList.parent().addClass('v--hidden');
+    let form = $(".form");
+
+    let submitButtonForm = $(".form__button");
+
+    form.on('submit', function(e){
+        e.preventDefault();
+    })
+
+    form.validate({
+
+        errorElement: "div",
+        errorPlacement: function(error, element) {
+            error.insertAfter(element.parent());
+        },
+
+        rules: {
+            email: {
+                required: true
+            }
+        },
+
+        messages: {
+            email: {
+                required: "Digite um endereço de e-mail.",
+                email: "Por favor, digite um e-mail válido."
+            }
         }
-    });
+    })
 
 }); 
