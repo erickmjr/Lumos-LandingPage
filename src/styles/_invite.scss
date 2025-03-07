@@ -19,41 +19,54 @@
         }
 
         &__input {
-
-            
-            text-align: center;
+            margin: 0 auto;
 
             .h3 {
+                margin-top: 1.5vh;
                 font-weight: 400;
+                text-align: center;
             }
 
             &__form {
 
-                margin-top: 1vw;
-                display: flex;
-                justify-content: center;
+                &__container {
 
-                .form__email {
+                    margin-top: 0.5vh;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+    
+                    .form__email {
+    
+                        &::placeholder {
+                            background-color: variables.$principalTextColor;
+                            color: variables.$backgroundColor;
+                        }
+    
+                        border: none;
+                        text-align: left;
+                        padding: 1vh 0 1vh 1.25vw;
+                        font-size: 1.25vw;
+                        border-radius: 20px 0 0 20px;
+                        width: 30%;
+                        height: 8vh;
+                        box-shadow: none;
 
-                    &::placeholder {
-                        background-color: variables.$principalTextColor;
-                        color: variables.$backgroundColor;
+                        &:focus {
+                            box-shadow: none !important;
+                            outline: none;
+                        }
                     }
-
-                    border: none;
-                    text-align: center;
-                    padding: 1vw;
-                    font-size: 1.5vw;
-                    border-radius: 20px 0 0 20px;
-                }
-
-                .form__button  {
-                    border: none;
-                    padding: 2vw;
-                    font-size: 1.5vw;
-                    border-radius: 0 20px 20px 0;
-                    background-color: variables.$secondaryTextColor;
-                    color: variables.$principalTextColor;
+    
+                    .form__button  {
+                        height: 8vh;
+                        border: none;
+                        padding: 1vh;
+                        font-size: 1.25vw;
+                        border-radius: 0 20px 20px 0;
+                        background-color: variables.$secondaryTextColor;
+                        color: variables.$principalTextColor;
+                    }
                 }
             }
         }

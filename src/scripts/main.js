@@ -59,8 +59,6 @@ $(document).ready(function(){
 
     let form = $(".form");
 
-    let submitButtonForm = $(".form__button");
-
     form.on('submit', function(e){
         e.preventDefault();
     })
