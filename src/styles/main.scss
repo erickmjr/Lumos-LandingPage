@@ -6,6 +6,7 @@
 @use 'mixins';
 @use 'highlight';
 @use 'my-list';
+@use 'invite';
 
 body {
     font-family: variables.$principalFont, sans-serif;
