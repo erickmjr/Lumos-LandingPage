@@ -11,9 +11,9 @@
         align-items: center;
         justify-content: space-around;
 
-        &__brand {
-            width: 100%;
-            max-width: 100px;
+        &__title {
+            font-weight: 300;
+            letter-spacing: 5px;
         }
 
         &__nav {

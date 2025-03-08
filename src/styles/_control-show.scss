@@ -7,6 +7,7 @@
     &__container {
         display: grid;
         grid-template-columns: repeat(2, 50%);
+        margin-top: 3vh;
 
         .control-show__brand__container-infos {
             padding: 2vw 2vw;
@@ -19,7 +20,7 @@
 
             p {
                 padding: 1vw;
-                margin-top: 5%;
+                margin-top: 1%;
                 font-weight: 400;
                 width: 60%;
                 color: variables.$principalFont;
