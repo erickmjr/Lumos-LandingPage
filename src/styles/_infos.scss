@@ -1,0 +1,25 @@
+@use 'variables';
+@use 'mixins';
+
+.infos {
+    color: variables.$principalTextColor;
+    width: 100%;
+    &__container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        &__item {
+            
+            .infos__list__item {
+                cursor: pointer;
+
+                &:hover {
+                    @include mixins.transform;
+                }
+            }
+        }
+    }
+}

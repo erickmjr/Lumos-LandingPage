@@ -7,6 +7,7 @@
 @use 'highlight';
 @use 'my-list';
 @use 'invite';
+@use 'infos';
 
 body {
     font-family: variables.$principalFont, sans-serif;
@@ -48,16 +49,28 @@ button {
     cursor: pointer;
 }
 
+.lumos__text {
+    font-weight: 300;
+    letter-spacing: 5px;
+    color: variables.$principalTextColor;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+}
+
 div.error {
+    margin-top: 1vh;
+    text-align: center;
+    color: variables.$errorColor;
 
     @media (max-width: 768px) {
         @include mixins.title(14px);
     }
 
-    margin-top: 1vh;
-    text-align: center;
-    color: variables.$errorColor;
 }
+
 .text--big {
     @include mixins.text(18px);
     @media (max-width: 768px) {

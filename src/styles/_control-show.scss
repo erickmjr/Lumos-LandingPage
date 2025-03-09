@@ -9,13 +9,21 @@
         grid-template-columns: repeat(2, 50%);
         margin-top: 3vh;
 
+        @media (max-width: 768px) {
+            margin-top: 1vh;
+        }
+
         .control-show__brand__container-infos {
-            padding: 2vw 2vw;
+            padding: 2vw;
             width: 100%;
+
+            @media (max-width: 768px) {
+                padding: 2vw;
+            }
 
             img {
                 width: 100%;
-                max-width: 280px;
+                max-width: 140px;
             }
 
             p {
@@ -24,6 +32,11 @@
                 font-weight: 400;
                 width: 60%;
                 color: variables.$principalFont;
+
+                @media (max-width: 768px) {
+                    font-size: 8px;
+                    width: 100%;
+                }
             }
 
             &__categories {
@@ -32,6 +45,11 @@
                 padding: 1vw;
                 gap: 12px;
                 
+                @media (max-width: 768px) {
+                    gap: 0;
+                    padding: 0;
+                } 
+
                 &__item {
                     border: 2px solid variables.$principalTextColor;
                     border-radius: 20px;
