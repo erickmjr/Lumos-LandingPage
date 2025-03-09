@@ -1,8 +1,27 @@
 $(document).ready(function(){
 
+    const header = $(".header");
+    const headerHeight = header.outerHeight(); 
+    const heroSection = $('.hero');
+
     let carouselHighlight = $('.highlight__carousel');
     let buttonPrevHighlight = $('#buttonPrevHighlight');
     let buttonNextHighlight = $('#buttonNextHighlight');
+
+    let carouselList = $('.mylist__carousel');
+    let buttonPrevList = $('#buttonPrevList');
+    let buttonNextList = $('#buttonNextList');
+
+    $(window).on('scroll', function(){
+        const currentPosition = window.scrollY;
+        if (currentPosition >= headerHeight) {
+            header.addClass('header--is-hidden');
+            heroSection.css("padding-top", `${headerHeight}px`);
+        } else {
+            header.removeClass('header--is-hidden');
+            heroSection.css('padding-top', '0');
+        }
+    })
     
     carouselHighlight.slick({
         slidesToShow: 4,
@@ -12,8 +31,16 @@ $(document).ready(function(){
         autoplay: false,
         infinite: false,
         edgeFriction: 0,
-        draggable: false
+        draggable: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }]
     });
+
 
     buttonPrevHighlight.click(function(){
         carouselHighlight.slick('slickPrev');
@@ -24,6 +51,7 @@ $(document).ready(function(){
     });
 
     carouselHighlight.on('afterChange', function (event, slick, currentSlide){
+        
         if (currentSlide === 0) {
             buttonPrevHighlight.parent().addClass('v--hidden');
             buttonNextHighlight.parent().removeClass('v--hidden');
@@ -36,9 +64,6 @@ $(document).ready(function(){
         }
     });
 
-    let carouselList = $('.mylist__carousel');
-    let buttonPrevList = $('#buttonPrevList');
-    let buttonNextList = $('#buttonNextList');
     
     carouselList.slick({
         slidesToShow: 4,
@@ -83,5 +108,8 @@ $(document).ready(function(){
             }
         }
     })
-
+    
+    function isMobileDevice() {
+        return window.innerWidth <= 768;
+    }
 }); 

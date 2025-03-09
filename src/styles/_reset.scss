@@ -10,4 +10,6 @@
 
 body {
     background-color: variables.$backgroundColor;
+    font-family: variables.$principalFont, sans-serif;
+    padding: 0;
 }

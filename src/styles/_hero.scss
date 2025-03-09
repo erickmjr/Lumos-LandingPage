@@ -3,4 +3,10 @@
     background-image: url('../images/hero/hero_background_pc.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+        background-size: cover;
+        background-position: center;
+        height: fit-content;
+    }
 }

@@ -29,6 +29,10 @@
 
 @mixin translateNumComplete {
     transform: scale(1.1) translateX(-16px) translateY(-5px);
+
+    @media (max-width: 768px) {
+        transform: scale(1.1) translateX(-10px) translateY(-5px);
+    }
 }
 
 
@@ -41,7 +45,7 @@
         color: variables.$principalTextColor;
 
         &__container {
-            all:unset;
+            all: unset;
             @include transform();
             cursor: pointer;
             display: flex;
@@ -52,7 +56,14 @@
             font-size: 40px;
         }
     }
+
+    .highlight__container > .pagination-arrows {
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+    }
 }
+
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
