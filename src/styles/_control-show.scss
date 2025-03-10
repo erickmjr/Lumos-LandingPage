@@ -3,7 +3,6 @@
 
 .control-show {
     @include mixins.navigationArrows;
-    
     &__container {
         display: grid;
         grid-template-columns: repeat(2, 50%);
@@ -104,7 +103,14 @@
                     padding: 0;
                     gap: 2vw;
                 } 
-                
+
+                @media (min-width: 768px) and (max-width: 1366px) {
+                    width: 130%;
+                    margin-top: 10%;
+                    padding: 0;
+                    gap: 2vw;
+                }
+            
                 &__button {
                     all: unset;
                     background: transparent;
@@ -116,10 +122,15 @@
                     cursor: pointer;
                     
                     @media (max-width: 768px) {
-                        font-weight: 700;
                         font-size: 14px;
                         padding: 2vw;
                     } 
+
+                    @media (min-width: 768px) and (max-width: 1024px) {
+                        font-size: 24px;
+                        padding: 2vw;
+                    } 
+
 
                     &__watch {
                         background-color: variables.$secondaryTextColor;

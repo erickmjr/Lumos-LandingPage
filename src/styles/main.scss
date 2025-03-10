@@ -80,13 +80,20 @@ div.error {
     @media (max-width: 768px) {
         @include mixins.title(14px);
     }
+
+    @media ((min-width: 768px) and (max-width: 1025px)) {
+        @include mixins.title(20px)
+    }
 }
 
 .text--small {
     @include mixins.text(12px);
+    @include mixins.title(14px);
+    
     @media (max-width: 768px) {
         @include mixins.title(11px);
     }
+
 }
 
 .title {

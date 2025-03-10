@@ -4,19 +4,20 @@
 .highlight {
     @include mixins.navigationArrows;
     @include mixins.sectionBasic;
-
-    @media (max-width: 768px) {
-        height: fit-content;
-    }
-
+    
     &__container {
         @include mixins.sectionContainerBasic;
         padding: 12px;
+
+        height: 100%;
 
         @media (max-width: 768px) {
             padding-bottom: 0;
         }
         
+        @media (max-width: 1025px) {
+            height: fit-content;
+        }
         .highlight__carousel {
             margin-bottom: 3vh;
             text-align: center;
@@ -28,7 +29,6 @@
                 cursor: pointer;
                 text-align: right;
 
-
                 img {
                     
                     @media (max-width: 768px) {
@@ -37,7 +37,6 @@
                 }
                 
                 &:hover{
-
                     .num__h3{
                         color: variables.$secondaryTextColor;
                         @include mixins.translateNumComplete;
@@ -46,6 +45,25 @@
                     img {
                         border-color: variables.$principalTextColor;
                         box-shadow: 10px 10px 40px 10px black;
+                    }
+                }
+
+                .num__7 {
+                    
+                }
+
+                .num__10 {
+                    &:only-child {
+                        left: -15px;
+                        letter-spacing: -55px;
+                        
+                        @media (min-width: 768px) and (max-width: 1024px) {
+                            left: -45px;
+                        }
+    
+                        @media (min-width: 1025px) and (max-width: 1366px) {
+                            left: -38px;
+                        }
                     }
                 }
 
@@ -59,32 +77,53 @@
                         left: 0;
                         top: 75px;
                     }
-                }
 
+                    @media (min-width: 769px) and (max-width: 1366px) {
+                        left: 15px;
+                    }
+
+                }
+                
                 &:nth-child(1) {
                     .highlight__carousel__item__num {
                         left: 40px;
-                        
-                        @media (max-width: 768px) {
-                            letter-spacing: -10px;
-                            left: 7px;
-                            top: 80px;
-                        }
                     }
                 }
-
-                &:nth-child(10) {
+                
+                &:nth-child(7) {
                     .highlight__carousel__item__num {
-                        left: -25px;
-                        letter-spacing: -35px;
-                        
-                        @media (max-width: 768px) {
-                            letter-spacing: -20px;
-                            top: 80px;
+                        left: 35px;
+
+                        @media (min-width: 1024px) and (max-width: 1366px) {
+                            left: 6px;
                         }
                     }
                 }
                 
+                &:nth-child(10) {
+                    .highlight__carousel__item__num {
+                        left: -15px;
+                        @media (min-width: 1024px) and (max-width: 1367px) {
+                            left: 26px;
+                        }
+
+                        .num__h3 {
+                            letter-spacing: -34px;
+                        }
+                    }
+                }
+
+
+                &:nth-child(13) {
+                    .highlight__carousel__item__num {
+                        left: -24px;
+
+                        .num__h3 {
+                            letter-spacing: -34px;
+                        }
+                    }
+                }
+
                 .num__h3 {
                     font-family: variables.$secondaryFont;
                     font-size: 180px;  
@@ -109,10 +148,5 @@
                 }
             }
         }
-    }
-
-    .slick-slide {
-        display: flex !important;
-        justify-content: flex-end !important; 
     }
 }

@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-    const header = $(".header");
-    const headerHeight = header.outerHeight(); 
-    const heroSection = $('.hero');
+    let header = $(".header");
+    let headerHeight = header.outerHeight(); 
+    let heroSection = $('.hero');
 
     let carouselHighlight = $('.highlight__carousel');
     let buttonPrevHighlight = $('#buttonPrevHighlight');
@@ -13,7 +13,7 @@ $(document).ready(function(){
     let buttonNextList = $('#buttonNextList');
 
     $(window).on('scroll', function(){
-        const currentPosition = window.scrollY;
+        let currentPosition = window.scrollY;
         if (currentPosition >= (headerHeight - 40)) {
             header.addClass('header--is-hidden');
             heroSection.css("padding-top", `${headerHeight}px`);
@@ -32,26 +32,29 @@ $(document).ready(function(){
         infinite: false,
         edgeFriction: 0,
         draggable: false,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                draggable: true
-            }, 
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 2,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                draggable: true
+        responsive: [
+                {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    autoplay: false,
+                    draggable: true
+                }
+            },
+            { 
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    autoplay: false,
+                    autoplaySpeed: 2000,
+                    draggable: true
+                }
             }
-        }]
+        ]
     });
 
     buttonPrevHighlight.click(function(){
@@ -83,19 +86,24 @@ $(document).ready(function(){
         infinite: true,
         edgeFriction: 0,
         draggable: true,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+        responsive: [
+            {
+                breakpoint: 1366,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    autoplay: false,
+                    autoplay: false
+                }
             },
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2,
-                autoplay: false
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2
+                }
             }
-        }]
+        ]
     });
     
     buttonPrevList.click(function(){
