@@ -3,10 +3,11 @@
 
 @mixin sectionBasic {
     @include navigationArrows();
-    height: 60vh;
-    width: 100%;
-    overflow: hidden;
-
+    
+    & {
+        height: 60vh;
+        width: 100%;
+    }
 }
 
 @mixin sectionContainerBasic {
@@ -28,15 +29,24 @@
 }
 
 @mixin translateNumComplete {
-    transform: scale(1.1) translateX(-16px) translateY(-5px);
 
+    transform: scale(1.1) translateX(-16px) translateY(-5px);
     @media (max-width: 768px) {
         transform: scale(1.1) translateX(-10px) translateY(-5px);
     }
+
 }
 
 
 @mixin navigationArrows {
+
+    .highlight__container > .pagination-arrows {
+        
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
     .pagination-arrows {
         padding: 0 2vw;
         width: 100%;
@@ -56,14 +66,7 @@
             font-size: 40px;
         }
     }
-
-    .highlight__container > .pagination-arrows {
-        @media (max-width: 768px) {
-            display: none !important;
-        }
-    }
 }
-
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;

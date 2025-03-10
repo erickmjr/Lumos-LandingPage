@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     $(window).on('scroll', function(){
         const currentPosition = window.scrollY;
-        if (currentPosition >= headerHeight) {
+        if (currentPosition >= (headerHeight - 40)) {
             header.addClass('header--is-hidden');
             heroSection.css("padding-top", `${headerHeight}px`);
         } else {
@@ -35,12 +35,24 @@ $(document).ready(function(){
         responsive: [{
             breakpoint: 768,
             settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                draggable: true
+            }, 
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 2,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                draggable: true
             }
         }]
     });
-
 
     buttonPrevHighlight.click(function(){
         carouselHighlight.slick('slickPrev');
@@ -64,14 +76,26 @@ $(document).ready(function(){
         }
     });
 
-    
     carouselList.slick({
         slidesToShow: 4,
         autoplay: false,
         arrows: false,
         infinite: true,
         edgeFriction: 0,
-        draggable: true
+        draggable: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            },
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                autoplay: false
+            }
+        }]
     });
     
     buttonPrevList.click(function(){

@@ -3,23 +3,42 @@
 
 .mylist {
     @include mixins.navigationArrows;
-    @include mixins.sectionBasic;
 
     &__container {
         @include mixins.sectionContainerBasic;
 
         .mylist__carousel {
-            margin-bottom: 3vh;
+            margin-bottom: 2vh;
 
             &__item {
                 position: relative;
+                display: flex !important;
+                justify-content: center !important;
+                img {
+
+                    @media (max-width: 768px) {
+                        width: 190px;
+                    }
+
+                    @media (max-width: 1024px) {
+                        width: 240px;
+                    }
+                }
                 
                 &__actions {
                     
+                    position: absolute;
                     top: 0;
                     right: 10px;
-                    position: absolute;
                     
+                    @media (max-width: 768px) {
+                        right: 10px;
+                    }
+
+                    @media (max-width: 1024px) {
+                        right: 10px;
+                    }
+
                     button {
                         all: unset;
                         font-size: 25px;
@@ -29,6 +48,14 @@
 
                         &:hover {
                             @include mixins.transform;
+                        }
+
+                        @media (max-width: 768px) {
+                            font-size: 12px;
+                        }
+
+                        @media (max-width: 1024px) {
+                            font-size: 20px;
                         }
                     }
 

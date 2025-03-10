@@ -109,3 +109,15 @@ div.error {
         @include mixins.title(26px);
     }
 }
+
+.credits {
+    text-align: center;
+    padding: 8px;
+    background-color: variables.$principalTextColor;
+    margin-top: 10px;
+
+    & a {
+        color: variables.$backgroundColor;
+        text-decoration: underline;
+    }
+}

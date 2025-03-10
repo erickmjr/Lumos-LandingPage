@@ -16,6 +16,8 @@
             .infos__list__item {
                 cursor: pointer;
 
+                color: rgba(variables.$principalTextColor, .8);
+
                 &:hover {
                     @include mixins.transform;
                 }
