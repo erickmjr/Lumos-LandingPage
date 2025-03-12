@@ -46,6 +46,10 @@
                 cursor: pointer;
                 @include mixins.transform;
 
+                &__button {
+                    all: unset;
+                }
+
                 .navigation__item__span {
                     background-color:variables.$secondaryTextColor;
                     height: 2px;
