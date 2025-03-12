@@ -3,6 +3,13 @@ $(document).ready(function(){
     let header = $(".header");
     let headerHeight = header.outerHeight(); 
     let heroSection = $('.hero');
+    let highlightSection = $(".highlight");
+    let mylistSection = $(".mylist");
+    let dropdown = $(".navigation__mobile__dropdown");
+    let dropdownButton = $(".dropdown__button");
+    let scrollToHero = $(".scrollToHero");
+    let scrollToHightlights = $(".scrollToHighlights");
+    let scrollToMylist = $(".scrollToMylist");
 
     let carouselHighlight = $('.highlight__carousel');
     let buttonPrevHighlight = $('#buttonPrevHighlight');
@@ -11,6 +18,29 @@ $(document).ready(function(){
     let carouselList = $('.mylist__carousel');
     let buttonPrevList = $('#buttonPrevList');
     let buttonNextList = $('#buttonNextList');
+
+    scrollToHero.on('click', function() {
+        $('html, body').animate({
+            scrollTop: heroSection.offset().top
+        }, 600);
+    })
+
+    scrollToHightlights.on('click', function() {
+        $('html, body').animate({
+            scrollTop: highlightSection.offset().top
+        }, 600);
+    })
+
+    scrollToMylist.on('click', function() {
+        $('html, body').animate({
+            scrollTop: mylistSection.offset().top
+        }, 600);
+    })
+
+
+    dropdownButton.on("click", function(){
+        dropdown.toggleClass('active');
+    });
 
     $(window).on('scroll', function(){
         let currentPosition = window.scrollY;

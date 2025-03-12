@@ -18,8 +18,8 @@
                     Lumos
                 </h1>
                 <nav class="header__container__nav">
-                    <ul class="header__container__navigation text">
-                        <li class="header__container__navigation__item header__container__navigation__item--is-active">
+                    <ul class="header__container__navigation text navigation__pc">
+                        <li class="header__container__navigation__item header__container__navigation__item">
                             Ínicio
                             <span class="navigation__item__span"></span>
                         </li>
@@ -33,12 +33,21 @@
                             Minha Lista
                             <span class="navigation__item__span"></span>
                         </li>
-                        
-                        <li class="header__container__navigation__item">
-                            FAQ
-                            <span class="navigation__item__span"></span>
-                        </li>
                     </ul>
+                    <div class="navigation__mobile">
+                        <button class="dropdown__button" type="button">Navegação<i class="bi-chevron-down text"></i></button>
+                        <ul class="navigation__mobile__dropdown">
+                            <li class="header__container__navigation__item navigation__mobile__dropdown__item text">
+                                <button class="scrollToHero" type="button">Ínicio</button>
+                            </li>
+                            <li class="header__container__navigation__item navigation__mobile__dropdown__item text">
+                                <button type="button" class="scrollToHighlights">Destaques</button>
+                            </li>
+                            <li class="header__container__navigation__item navigation__mobile__dropdown__item text">
+                                <button type="button" class="scrollToMylist">Minha Lista</button>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
     
                 <div class="header__container__profile">
@@ -120,7 +129,7 @@
         </section>
     </div>
 
-    <section class="highlight">
+    <section class="highlight" id="highlight">
         <h2 class="highlight__title title">Destaques da semana</h2>
 
         <div class="highlight__container">
@@ -307,7 +316,6 @@
                         <li class="infos__list__item text--small">Central de ajuda</li>
                     </ul>
                 </div>
-            
             </div>
         </footer>
     </section>
